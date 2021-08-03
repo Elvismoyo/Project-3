@@ -60,10 +60,13 @@ const displayMessage = (n) => {
 
     let resultMessage = doc(".subtitle-game");
     let lowOrhigh = doc(".info-1-text");
+    let showNum = doc(".show-number");
     let score = doc(".score");
     if(n==1){
     doc('body').style = "background: linear-gradient(to right, #dce35b, #45b649);"
     resultMessage.innerHTML = messages[0];
+    showNum.style.visibility = "visible";
+    showNum.innerHTML = randomNumber;
     lowOrhigh.innerHTML = messages[0];
     doc(".check").disabled = true;
     doc(".try-again").style.visibility = "visible";
@@ -77,8 +80,10 @@ const displayMessage = (n) => {
     remaingGuesses--;
     }
     if(remaingGuesses == 0){
-        resultMessage.innerHTML = messages[3] + `<br> The number was ${randomNumber}`;
-        lowOrhigh.innerHTML = messages[3] + `<br> The number was ${randomNumber}`;
+        resultMessage.innerHTML = messages[3] + `<br>The number was:`;
+        showNum.style.visibility = "visible";
+        showNum.innerHTML = randomNumber;
+        lowOrhigh.innerHTML = messages[3];
         doc(".check").disabled = true;
         doc(".try-again").style.visibility = "visible";
         doc("body").style = "background: linear-gradient(to right, #ee0979, #ff6a00);"
@@ -89,6 +94,7 @@ const displayMessage = (n) => {
 
 const resetGame = () =>{
     checkDuplicateGuesses = [];
+    doc(".show-number").style.visibility = "hidden";
     doc(".try-again").style.visibility = "hidden";
     doc(".check").disabled = false;
     doc(".info-1-text").innerHTML = messages[4];

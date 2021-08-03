@@ -25,6 +25,23 @@ body{
 
 }
 
+.show-number{
+
+    position: absolute;
+    background-color: white;
+    max-height: 80%;
+    height: 80%;
+    width: 6%;
+    border-radius: 10px;
+    text-align: center; 
+    line-height: 100px;
+    vertical-align: middle;
+    text-align: center;
+    visibility: hidden;
+    font-size: 60px;
+}
+
+
 .line-breaker{
 
     background-color: black;
@@ -51,6 +68,7 @@ button{
     align-items: center;
 
     height: 30vh;
+    margin-top: 4%;
 
 }
 
