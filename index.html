@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="index.js"></script>
+   
+
+        <div class="title-game-container">
+            <h2 class="title-game">Guess the number Between 1 and 100</h2>
+            <h1 class="subtitle-game">Guess My Number</h1>
+        </div>
+        <div class="box-line-container">
+            <img class="question-box" src="imgs/mario-question.png" alt="Mario box question" title="?">
+            <hr class="line-breaker">
+        </div>
+    
+        <div class="info-container">
+            <div class="info-1-container">
+                <h2 class="info-1-text">Make A Guess</h2>
+                <br><br><br>
+                <h2 class="normal-score">Score: <span class="score">10</span></h2>
+                <h2 class="high-score">Highest Score: <span class="highest-score">0</span></h2>
+            </div>
+            <div class="info-2-container">
+                <div class="input-number-container">
+                <input placeholder="?" class="input-number" type="text">
+                
+                </div>
+                <br>
+                <div class="slider-number">
+                    <input oninput="updateNumber()"  type="range" min="1" max="100" value="50" id="slider-range" class="slider">
+                </div>
+                <div class="btns-container">
+                    <button class="check">Check</button>
+                    <button class="try-again">Try Again?</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="guessing-history-container">
+            <div class="guessing-history">
+                <h1 class="guessing-title">Guessing History</h1>
+                
+                <h2 class="guessed-numbers"></h2>
+              </div> 
+            </div>
+        </div>
+
+    
+</body>
+</html>
