@@ -13,8 +13,9 @@ var nguess = 1;
 const initGame = () =>{
 
     
-    
+
     let winnerNumber = randomNumber;
+    console.log("Psst the winner is : " + winnerNumber);
     let guessingHistory = doc(".guessed-numbers");    
     let inputNumber = doc(".input-number").value;
     
